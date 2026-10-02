@@ -51,7 +51,7 @@ public class RekapNilai {
                 case 'B' -> "Baik";
                 case 'C' -> "Cukup";
                 case 'D' -> "Kurang";
-                default  -> "Tidak Lulus";
+                default -> "Tidak Lulus";
             };
 
             System.out.println("  Grade " + grade + " — " + keterangan);
