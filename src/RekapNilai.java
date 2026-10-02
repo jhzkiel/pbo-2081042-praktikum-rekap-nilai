@@ -33,18 +33,20 @@ public class RekapNilai {
             // TODO: balik urutannya (>= 60 paling atas), jalankan dengan nilai 85,
             // lalu tulis hasilnya di sini sebagai komentar.
             char grade;
-            if (nilai >= 90) {
-                grade = 'A';
-            } else if (nilai >= 80) {
-                grade = 'B';
+            if (nilai >= 60) {
+                grade = 'D';
             } else if (nilai >= 70) {
                 grade = 'C';
-            } else if (nilai >= 60) {
-                grade = 'D';
+            } else if (nilai >= 80) {
+                grade = 'B';
+            } else if (nilai >= 90) {
+                grade = 'A';
             } else {
                 grade = 'E';
             }
-
+        // EKsperimen (langkah 3): urutan dibalik, >= 60 ditaruh paling atas.
+        // Hasil untuk nilai 85: Grade D (Kurang), harusnya B.
+        // Penyebab: ladder dicek dari atas dan berhenti di kondisi pertama yang benar.
             String keterangan = switch (grade) {
                 case 'A' -> "Sangat Baik";
                 case 'B' -> "Baik";
